@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git 'git branch: 'main', url: 'https://github.com/rahulhajare0909/BasicCiCd.git'
+                git url: 'https://github.com/rahulhajare0909/BasicCiCd.git', branch: 'main'
             }
         }
 
