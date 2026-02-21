@@ -1,0 +1,4 @@
+pytest
+requests
+pylint
+pytest-html
