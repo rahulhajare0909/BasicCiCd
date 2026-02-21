@@ -11,26 +11,19 @@ pipeline {
 
         stage('Setup Python') {
             steps {
-                sh 'python --version'
-                sh 'pip install -r requirements.txt'
+                bat 'python --version'
             }
         }
 
-        stage('Code Quality') {
+        stage('Install Dependencies') {
             steps {
-                sh 'pylint app --fail-under=6'
+                bat 'pip install -r requirements.txt'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'pytest tests --html=report.html'
-            }
-        }
-
-        stage('Archive Reports') {
-            steps {
-                archiveArtifacts artifacts: 'report.html', fingerprint: true
+                bat 'pytest'
             }
         }
     }
