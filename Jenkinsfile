@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/rahulhajare0909/sdet-ci-project.git'
+                git 'https://github.com/rahulhajare0909/BasicCiCd.git'
             }
         }
 
