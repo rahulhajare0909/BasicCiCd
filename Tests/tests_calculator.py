@@ -1,7 +1,26 @@
-from app.calculator import add, divide
+# Basic Calculator Program
 
-def test_add():
-    assert add(2,3) == 5
+print("Simple Calculator")
+print("Operations: +  -  *  /")
 
-def test_divide():
-    assert divide(10,2) == 5
+num1 = float(input("Enter first number: "))
+operator = input("Enter operator: ")
+num2 = float(input("Enter second number: "))
+
+if operator == "+":
+    print("Result:", num1 + num2)
+
+elif operator == "-":
+    print("Result:", num1 - num2)
+
+elif operator == "*":
+    print("Result:", num1 * num2)
+
+elif operator == "/":
+    if num2 != 0:
+        print("Result:", num1 / num2)
+    else:
+        print("Error: Division by zero not allowed")
+
+else:
+    print("Invalid operator")
