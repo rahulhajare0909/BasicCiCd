@@ -11,7 +11,7 @@ pipeline {
 
         stage('Setup Python') {
             steps {
-                bat 'python --version'
+                bat '"C:\\Users\\VICTUS\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe" --version'
             }
         }
 
